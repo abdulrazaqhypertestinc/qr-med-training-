@@ -1,4 +1,3 @@
-
 function SummaryCard({ title, count }) {
   return (
     <div className="summary-card">

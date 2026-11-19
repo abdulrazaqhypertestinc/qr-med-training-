@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 import TaskCard from '../components/TaskCard.jsx';
@@ -17,17 +16,11 @@ function Dashboard() {
       task.title.toLowerCase().includes(search.toLowerCase()) ||
       task.assignee.toLowerCase().includes(search.toLowerCase());
 
-    const matchesStatus =
-      status === 'All' || task.status === status;
+    const matchesStatus = status === 'All' || task.status === status;
 
-    const matchesPriority =
-      priority === 'All' || task.priority === priority;
+    const matchesPriority = priority === 'All' || task.priority === priority;
 
-    return (
-      matchesSearch &&
-      matchesStatus &&
-      matchesPriority
-    );
+    return matchesSearch && matchesStatus && matchesPriority;
   });
 
   // Clear all filters
@@ -39,7 +32,6 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-
       <header>
         <h1>QR MED Team Workspace</h1>
         <p>Manage your engineering team tasks</p>
@@ -57,26 +49,16 @@ function Dashboard() {
       <h2>Team Tasks</h2>
 
       <div className="task-list">
-
         {filteredTasks.length > 0 ? (
-          filteredTasks.map((task) => (
-            <TaskCard
-              key={task.id}
-              task={task}
-            />
-          ))
+          filteredTasks.map((task) => <TaskCard key={task.id} task={task} />)
         ) : (
           <div className="no-tasks">
             <p>No tasks found!</p>
 
-            <button onClick={clearFilters}>
-              Clear Filters
-            </button>
+            <button onClick={clearFilters}>Clear Filters</button>
           </div>
         )}
-
       </div>
-
     </div>
   );
 }

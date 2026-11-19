@@ -3,6 +3,7 @@ import { useState } from 'react';
 import TaskCard from '../components/TaskCard.jsx';
 import FilterBar from '../components/FilterBar.jsx';
 import tasks from '../data/tasks.js';
+import '../App.css';
 
 function Dashboard() {
   const [search, setSearch] = useState('');

@@ -7,7 +7,6 @@ import FilterBar from '../components/FilterBar.jsx';
 import tasks from '../data/tasks.js';
 import '../styles/global.css';
 
-
 function Dashboard() {
   const [search, setSearch] = useState('');
   const [status, setStatus] = useState('All');

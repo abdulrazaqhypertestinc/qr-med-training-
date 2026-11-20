@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-import Header from '../components/Header.jsx';
-import SummaryCard from '../components/SummaryCard.jsx';
 import TaskCard from '../components/TaskCard.jsx';
 import FilterBar from '../components/FilterBar.jsx';
 import tasks from '../data/tasks.js';
